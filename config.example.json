@@ -1,0 +1,9 @@
+{
+  "host": "127.0.0.1",
+  "port": 31982,
+  "gsiToken": "dota-dj-local",
+  "combatLogPath": "",
+  "packManifest": "/music/sample-pack/manifest.json",
+  "decayPerSecond": 0.9,
+  "crossfadeSeconds": 2.5
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dota DJ Overlay</title>
+  <style>
+    html,body{margin:0;background:transparent;color:white;font-family:Inter,system-ui,sans-serif;overflow:hidden}main{display:flex;align-items:center;gap:12px;padding:16px;text-shadow:0 2px 12px #000}.pulse{width:13px;height:13px;border-radius:50%;background:#8af0b4;box-shadow:0 0 24px #8af0b4}.pulse[data-cue="epic"]{background:#ffc875;box-shadow:0 0 24px #ffc875}.pulse[data-cue="war"]{background:#ff766f;box-shadow:0 0 24px #ff766f}.label{font-weight:900;letter-spacing:.12em;font-size:14px}.score{opacity:.7;font-variant-numeric:tabular-nums}
+  </style>
+</head>
+<body>
+  <main><span class="pulse" id="pulse"></span><span class="label" id="cue">COZY</span><span class="score" id="score">0</span></main>
+  <script>
+    const cue=document.querySelector('#cue'),pulse=document.querySelector('#pulse'),score=document.querySelector('#score');
+    const render=state=>{cue.textContent=state.cue.toUpperCase();pulse.dataset.cue=state.cue;score.textContent=Math.round(state.intensity)};
+    fetch('/api/state').then(r=>r.json()).then(data=>render(data.state));
+    const stream=new EventSource('/api/events');
+    for(const name of ['state','combat'])stream.addEventListener(name,event=>{const value=JSON.parse(event.data);render(value.state??value)});
+  </script>
+</body>
+</html>

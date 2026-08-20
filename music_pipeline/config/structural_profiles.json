@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "provenance": "Generic human-authored design targets; not derived from any named work.",
+  "states": {
+    "cozy": {
+      "bpm": 80,
+      "bars": 4,
+      "intensity": 0.25,
+      "target_rms_dbfs": -18.0,
+      "transient_density_per_second": 1.3,
+      "brightness": "low",
+      "palette": ["soft triangle pad", "sine bass", "gentle noise brush"]
+    },
+    "epic": {
+      "bpm": 96,
+      "bars": 4,
+      "intensity": 0.62,
+      "target_rms_dbfs": -15.0,
+      "transient_density_per_second": 2.4,
+      "brightness": "medium",
+      "palette": ["wide additive brass", "octave pulse", "frame-drum synthesis"]
+    },
+    "war": {
+      "bpm": 120,
+      "bars": 4,
+      "intensity": 0.95,
+      "target_rms_dbfs": -12.5,
+      "transient_density_per_second": 4.8,
+      "brightness": "high",
+      "palette": ["dissonant low strings", "rapid synthesized drums", "noise impacts"]
+    }
+  }
+}

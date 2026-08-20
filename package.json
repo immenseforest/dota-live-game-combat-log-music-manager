@@ -1,0 +1,16 @@
+{
+  "name": "dota-live-game-combat-log-music-manager",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A local adaptive music DJ for live Dota 2 telemetry.",
+  "scripts": {
+    "start": "node src/server.js",
+    "install:gsi": "node scripts/install-gsi.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

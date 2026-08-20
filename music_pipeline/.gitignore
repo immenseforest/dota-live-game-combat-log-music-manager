@@ -1,0 +1,4 @@
+analysis_report.json
+references/
+__pycache__/
+*.pyc

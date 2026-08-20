@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "pack_id": "original_adaptive_dota_stream_pack",
+  "title": "Hearth to Frontline",
+  "generator_version": "1.0.0",
+  "seed": 3497664550,
+  "sample_rate": 16000,
+  "channels": 1,
+  "sample_width_bits": 16,
+  "license": "CC0-1.0",
+  "provenance": "100% synthesis; no samples, recordings, or reference melodies",
+  "states": {
+    "cozy": {
+      "file": "cozy_loop.wav",
+      "bpm": 80,
+      "meter": "4/4",
+      "bars": 4,
+      "intensity": 0.25,
+      "duration_seconds": 12.0,
+      "crossfade_ms": 120,
+      "transition_quantization": "next_bar",
+      "allowed_next": [
+        "epic",
+        "war"
+      ],
+      "sha256": "24f491abf456b342da1097319ad029b8164940c9f96fcf0c89db7269e97f966a"
+    },
+    "epic": {
+      "file": "epic_loop.wav",
+      "bpm": 96,
+      "meter": "4/4",
+      "bars": 4,
+      "intensity": 0.62,
+      "duration_seconds": 10.0,
+      "crossfade_ms": 120,
+      "transition_quantization": "next_bar",
+      "allowed_next": [
+        "cozy",
+        "war"
+      ],
+      "sha256": "9526f32950d210ac69599d1169f99816fbeef58077641800f17b5d18553a7dfa"
+    },
+    "war": {
+      "file": "war_loop.wav",
+      "bpm": 120,
+      "meter": "4/4",
+      "bars": 4,
+      "intensity": 0.95,
+      "duration_seconds": 8.0,
+      "crossfade_ms": 120,
+      "transition_quantization": "next_bar",
+      "allowed_next": [
+        "cozy",
+        "epic"
+      ],
+      "sha256": "f69003e5cd1be9d86a386532dc29197dd857afec33f330439318b9c5be3a736e"
+    }
+  },
+  "stingers": {
+    "up": {
+      "file": "stinger_up.wav",
+      "sha256": "6b941bffec7caa266d090c3f52362694248ef7d7a9e26fa6cee8a70385d3d85f"
+    },
+    "down": {
+      "file": "stinger_down.wav",
+      "sha256": "128d55b9173f339ca99d8ed132b54655dcde15e49a2c337cc8ec2a22d9a93942"
+    }
+  }
+}
